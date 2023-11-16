@@ -2,7 +2,7 @@ import ScrollReveal from 'scrollreveal'
 
 // Базовые настройки
 ScrollReveal({
-  distance: '100px',
+  distance: '50px',
   duration: 2000,
 })
 
