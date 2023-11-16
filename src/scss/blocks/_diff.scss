@@ -18,22 +18,22 @@
     background-size: cover;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 67%;
-    // right: -35%;
-    // width: 718px;
-    // height: 685px;
-    right: calc(var(--index) * -35.5);
-    width: calc(var(--index) * 50);
-    height: calc(var(--index) * 46.5);
-    transform: translate(0%, -50%) rotate(90deg);
-    background-image: url(./../img/gradient/gradient-02.svg);
-    background-position: center center;
-    background-size: cover;
-    z-index: -1;
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 67%;
+  //   // right: -35%;
+  //   // width: 718px;
+  //   // height: 685px;
+  //   right: calc(var(--index) * -35.5);
+  //   width: calc(var(--index) * 50);
+  //   height: calc(var(--index) * 46.5);
+  //   transform: translate(0%, -50%) rotate(90deg);
+  //   background-image: url(./../img/gradient/gradient-02.svg);
+  //   background-position: center center;
+  //   background-size: cover;
+  //   z-index: -1;
+  // }
 }
 
 .diff__title {
