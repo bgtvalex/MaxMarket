@@ -1,0 +1,74 @@
+/* acc Icon */
+.btn-acc-btn {
+	--time: 0.1s;
+
+	--width: 24px;
+	--height: 24px;
+
+	--line-height: 1px;
+	--spacing: 6px;
+
+	--color: #000;
+	--radius: 4px;
+
+	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
+	width: var(--width);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.acc-icon {
+	position: relative;
+	width: var(--width);
+	height: var(--line-height);
+	background-color: var(--color);
+	border-radius: var(--radius);
+}
+
+.acc-icon::before,
+.acc-icon::after {
+	content: '';
+	display: block;
+
+	position: absolute;
+	left: 0;
+
+	width: var(--width);
+	height: var(--line-height);
+
+	border-radius: var(--radius);
+	background-color: var(--color);
+	transition: transform var(--time) ease-in,
+		top var(--time) linear var(--time);
+}
+
+.acc-icon::before {
+	/* top: calc(var(--line-height) * -2); */
+	top: calc(-1 * (var(--line-height) + var(--spacing)));
+}
+
+.acc-icon::after {
+	/* top: calc(var(--line-height) * 2); */
+	top: calc(var(--line-height) + var(--spacing));
+}
+
+.acc-icon.acc-icon--active {
+	background-color: transparent;
+}
+
+.acc-icon.acc-icon--active::before,
+.acc-icon.acc-icon--active::after {
+	top: 0;
+	transition: top var(--time) linear,
+		transform var(--time) ease-in var(--time);
+}
+
+.acc-icon.acc-icon--active::before {
+	transform: rotate(45deg);
+}
+
+.acc-icon.acc-icon--active::after {
+	transform: rotate(-45deg);
+}

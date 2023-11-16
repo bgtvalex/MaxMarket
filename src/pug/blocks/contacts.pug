@@ -1,0 +1,28 @@
+section.contacts#contacts
+	.container
+		.contacts__title
+			.title-2 ХОЧУ НАЧАТЬ ЗАРАБАТЫВАТЬ С MAXMARKET
+		.contacts__row
+			.contacts__desc
+				.contacts__header Контакты
+				.contacts__list
+					.contacts__item 
+						img(src="./img/icon/address.svg", alt="")
+						<b>Адрес: </b>  Москва, Ленинские горы, 1 
+					.contacts__item 
+						img(src="./img/icon/mail.svg", alt="")
+						b Email: <a href="mailto:mail@mail.ru">mail@mail.ru</a>
+					.contacts__item 
+						img(src="./img/icon/phone.svg", alt="")
+						b Телефон: <a href="tel:+79000000000">+7(900) 000 0000</a>
+			.contacts__form
+				.contacts__header Оставьте свой телефон,<br> мы ответим на все ваши вопросы
+				.form
+					.form__input--wrapper
+						.form__label.form__label--name Ваше имя
+						input.form__input#inpText(type='text')
+					.form__input--wrapper
+						.form__label.form__label--tel Ваш номер телефона
+						input.form__input#inpTel(type='text')
+					button.form__btn.btn Отправить
+				p.contacts__conf Нажимая на кнопку, вы соглашаетесь с <a href="#!">политикой конфиденциальности</a>

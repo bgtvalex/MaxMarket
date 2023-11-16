@@ -1,0 +1,37 @@
+- var pageTitle = 'MaxMarket'
+
+doctype html
+html(lang="en")
+  head
+    title MaxMarket
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="icon" href="./img/icon/favicon.ico")
+    <link rel="icon" href="./img/icon/favicon.ico">
+    link(rel="stylesheet" href="./css/main.css")
+    link(rel="stylesheet" href="./../fonts/Manrope/stylesheet.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap")
+  body
+    include blocks/mobile-nav
+    include blocks/header
+    include blocks/header-fixed
+    main
+      .sector(data-sector='0')
+        include blocks/start
+        include blocks/steps
+        include blocks/benefits
+      .sector(data-sector='1')
+        include blocks/variants
+      .sector(data-sector='2')
+        include blocks/why
+        include blocks/cta
+        include blocks/about
+        include blocks/diff
+        include blocks/indicators
+        include blocks/appeal
+      .sector(data-sector='3')
+        include blocks/contacts
+    include blocks/footer
+
+    script(src="./js/index.bundle.js")

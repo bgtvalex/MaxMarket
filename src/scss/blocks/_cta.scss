@@ -1,0 +1,35 @@
+.cta {
+  margin-bottom: 50px;
+}
+
+.cta__row {
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  padding: 20px 0;
+}
+
+.cta__btn {
+  margin: 30px auto 10px;
+  animation: pulse 0.8s infinite linear;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: scale(1.05, 1.05);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@media (max-width: 424px) {
+  .cta__btn {
+    margin: 30px auto 10px;
+    animation: pulse 0.8s infinite linear;
+  }
+}

@@ -1,0 +1,73 @@
+.appeal {
+	padding: 50px 0;
+	position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: calc(var(--index) * 5.5);
+    width: calc(var(--index) * 50);
+    height: calc(var(--index) * 46.5);
+    transform: translate(0%, -50%) rotate(154deg);
+    background-image: url(./../img/gradient/gradient-03.svg);
+    background-position: center;
+    background-size: cover;
+		z-index: -1;
+  }
+}
+
+.appeal__title {
+	margin-bottom: 30px;
+}
+
+.appeal__video {
+	display: flex;
+	justify-content: center;
+  background-color: var(--gray);
+  width: 760px;
+  height: 420px;
+  margin: 0 auto;
+  
+  iframe {
+    width: 760px;
+    height: 420px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .appeal__video {
+    width: 700px;
+    height: 389px;
+  
+    iframe {
+      width: 700px;
+      height: 389px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .appeal__video {
+    width: 380px;
+    height: 210px;
+  
+    iframe {
+      width: 380px;
+      height: 210px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .appeal__video {
+    width: 280px;
+    height: 150px;
+  
+    iframe {
+      width: 280px;
+      height: 150px;
+    }
+  }
+}
+

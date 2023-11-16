@@ -1,0 +1,172 @@
+.diff {
+  margin: 50px 0 50px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 27%;
+    // left: -41%;
+    // width: 980px;
+    // height: 935px;
+    left: calc(var(--index) * -35.5);
+    width: calc(var(--index) * 50);
+    height: calc(var(--index) * 46.5);
+    transform: translate(0%, -50%) rotate(80deg);
+    background-image: url(./../img/gradient/gradient-01.svg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 67%;
+    // right: -35%;
+    // width: 718px;
+    // height: 685px;
+    right: calc(var(--index) * -35.5);
+    width: calc(var(--index) * 50);
+    height: calc(var(--index) * 46.5);
+    transform: translate(0%, -50%) rotate(90deg);
+    background-image: url(./../img/gradient/gradient-02.svg);
+    background-position: center center;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.diff__title {
+  margin-bottom: 50px;
+}
+
+.diff__row {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 250px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 226px;
+    height: 407px;
+    bottom: 0%;
+    left: 51%;
+    transform: translateX(-50%);
+    background-image: url(./../img/start/diff-03.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.diff__card {
+  position: relative;
+  width: 335px;
+  height: 380px;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 40px 5px 20px;
+  text-align: center;
+
+  &:nth-child(1) {
+    border-color: var(--accent);
+  }
+
+  &:nth-child(2) {
+    border-color: var(--blue);
+  }
+}
+
+.diff__icon {
+  width: 91px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  &--left {
+    transform: translate(-50%, -50%);
+    width: 111px;
+
+    img {
+      width: 111px;
+    }
+  }
+
+  &--right {
+    transform: translate(-50%, -50%);
+    width: 91px;
+
+    img {
+      width: 91px;
+    }
+  }
+}
+
+.diff__card-title {
+  font-size: 25px;
+  font-family: 'Jura', Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.diff__item {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.diff__line {
+  width: 60%;
+  height: 1px;
+  border: 1px solid;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  margin: 15px auto 0;
+
+  &--left {
+    border-image: linear-gradient(to right, #fff, var(--accent), #fff);
+    border-image-slice: 1;
+  }
+
+  &--right {
+    border-image: linear-gradient(to right, #fff, var(--blue), #fff);
+    border-image-slice: 1;
+  }
+}
+
+@media (max-width: 1023px) {
+  .diff__row {
+    flex-direction: column;
+    gap: 100px;
+
+    &::before {
+      display: none;
+    }
+  }
+  .diff__card--left {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 226px;
+      height: 407px;
+      top: -8%;
+      right: -65%;
+      // transform: translateX(-50%);
+      background-image: url(./../img/start/diff-03.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .diff__card--left {
+    &::before {
+      display: none;
+    }
+  }
+}
