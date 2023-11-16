@@ -1,6 +1,6 @@
 ## project: MaxMarket ([copied from Tilda](https://opt-maxmarket.ru/))
 
-*[demo](https://bgtvalex.github.io/MaxMarket/)
+* [demo](https://bgtvalex.github.io/MaxMarket/)
 
 ### Technologies:
 *  HTML, CSS, JS, PUG, SASS, Gulp, Webpack.
